@@ -1,22 +1,22 @@
-// new Vivus('my-svg', {
-// 	type: 'oneByOne',
-// 	duration: 100,
-// 	animTimingFunction: Vivus.EASE_IN
-// }, function (myVivus) {
-// 	setTimeout(function () {
-// 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
-// 	}, 0);
-// })
+new Vivus('my-svg', {
+	type: 'oneByOne',
+	duration: 100,
+	animTimingFunction: Vivus.EASE_IN
+}, function (myVivus) {
+	setTimeout(function () {
+		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+	}, 0);
+})
 
-// new Vivus('planet', {
-// 	type: 'oneByOne',
-// 	duration: 100,
-// 	animTimingFunction: Vivus.EASE
-// }, function (myVivus) {
-// 	setTimeout(function () {
-// 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
-// 	}, 100);
-// })
+new Vivus('planet', {
+	type: 'oneByOne',
+	duration: 100,
+	animTimingFunction: Vivus.EASE
+}, function (myVivus) {
+	setTimeout(function () {
+		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+	}, 100);
+})
 
 let modeButton = document.querySelector('#toggle');
 let mode = document.querySelector('.wrapper');
