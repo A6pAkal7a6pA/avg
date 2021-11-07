@@ -1,7 +1,8 @@
 new Vivus('my-svg', {
 	type: 'oneByOne',
 	duration: 100,
-	animTimingFunction: Vivus.EASE_IN
+	animTimingFunction: Vivus.EASE_IN,
+	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
 }, function (myVivus) {
 	setTimeout(function () {
 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
@@ -11,7 +12,8 @@ new Vivus('my-svg', {
 new Vivus('planet', {
 	type: 'oneByOne',
 	duration: 100,
-	animTimingFunction: Vivus.EASE
+	animTimingFunction: Vivus.EASE,
+	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
 }, function (myVivus) {
 	setTimeout(function () {
 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
@@ -30,11 +32,11 @@ modeButton.addEventListener('click', (e) => {
 		mode.classList.remove('dark');
 	}
 });
-$(document).ready(function(){
-	$(".menu").on("click","a", function (event) {
-			event.preventDefault();
-			var id  = $(this).attr('href'),
-					top = $(id).offset().top;
-			$('body,html').animate({scrollTop: top}, 1500);
+$(document).ready(function () {
+	$(".menu").on("click", "a", function (event) {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({ scrollTop: top }, 1500);
 	});
 });
