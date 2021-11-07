@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../fonts/icons.eot?iffklr');
+  src:  url('../fonts/icons.eot?iffklr#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?iffklr') format('truetype'),
+    url('../fonts/icons.woff?iffklr') format('woff'),
+    url('../fonts/icons.svg?iffklr#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, 
+[class*="icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-team-icon:before {
+  content: "\e900";
+}
+.icon-tg-icon:before {
+  content: "\e901";
+}
+.icon-portfolio-icon:before {
+  content: "\e902";
+}
+.icon-media-icon:before {
+  content: "\e903";
+}
+.icon-about-icon:before {
+  content: "\e904";
+}
