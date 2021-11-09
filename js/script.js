@@ -9,6 +9,13 @@ naavy.click(function() {
     naavy.removeClass("active");
     $(this).addClass('active');
 });
+if ($('#aside').hasClass('active')) {
+	$('#aside').removeClass('active');
+	$('.header__burger').removeClass('active');
+} else {
+	$('#aside').addClass('active');
+	$('.header__burger').addClass('active');
+}
 });
 new Vivus('my-svg', {
 	type: 'oneByOne',
