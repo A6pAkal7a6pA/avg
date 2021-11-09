@@ -12,8 +12,7 @@
 
 [class^="icon-"]::before, 
 [class*="icon-"]::before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
+	font-family: 'icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,18 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-team-icon:before {
+.icon-partners:before {
   content: "\e900";
 }
-.icon-tg-icon:before {
+.icon-team-icon:before {
   content: "\e901";
 }
-.icon-portfolio-icon:before {
+.icon-tg-icon:before {
   content: "\e902";
 }
-.icon-media-icon:before {
+.icon-portfolio-icon:before {
   content: "\e903";
 }
-.icon-about-icon:before {
+.icon-media-icon:before {
   content: "\e904";
+}
+.icon-about-icon:before {
+  content: "\e905";
 }

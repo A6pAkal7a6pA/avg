@@ -97,6 +97,57 @@ a {
 	color: #ffffff;
 }
 
+.header {
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	display: none;
+	&__burger {
+		display: block;
+		position: relative;
+		width: 25px;
+		height: 18px;
+		padding: 20px;
+	}
+
+	&__burger::before,
+	&__burger::after,
+	&__burger span {
+		content: "";
+		position: absolute;
+		width: 25px;
+		height: 2px;
+		background-color: #fff;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	&__burger::after {
+		top: 16px;
+	}
+	&__burger::before {
+		top: 0;
+	}
+	&__burger span {
+		top: 8px;
+	}
+	&__burger.active {
+		// position: fixed;
+		z-index: 50;
+	}
+
+	&__burger.active span {
+		transform: scale(0);
+	}
+
+	&__burger.active::before {
+		transform: rotate(45deg);
+		top: 8px;
+	}
+	&__burger.active::after {
+		transform: rotate(-45deg);
+		top: 8px;
+	}
+}
 .moon {
 	width: 20px;
 	height: 20px;
@@ -346,6 +397,7 @@ a {
 	&__head {
 		img {
 			height: 100%;
+			max-width: 100%;
 		}
 	}
 
@@ -383,7 +435,6 @@ a {
 		margin: 0 70px;
 	}
 	.team-row {
-		
 		&__title {
 			font-family: $fontfamilyMono;
 			font-style: normal;
@@ -684,6 +735,12 @@ a {
 		display: flex;
 		align-items: center;
 		margin-bottom: 25px;
+		&:nth-child(2n + 2) {
+			margin-bottom: 50px;
+			&:last-child {
+				margin-bottom: 25px;
+			}
+		}
 	}
 
 	&__image {
@@ -697,6 +754,40 @@ a {
 		line-height: 22px;
 		letter-spacing: 0.02em;
 		color: #86baff;
+		max-width: 260px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+
+.partners {
+
+	&__content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__title {
+		font-family: "IBM Plex Mono", monospace;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	&__item {
+		margin-right: 40px;
+	}
+	&__item a{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 150px;
+			height: 150px;
+		}
 	}
 }
 
@@ -822,5 +913,165 @@ a {
 		.media-row__title {
 			color: #080804;
 		}
+		.partners__title {
+			color: #080804;
+		}
 	}
 }
+
+
+.part-item {
+}
+
+@media(max-width: 1245px) {
+	.about__head {
+		padding-right: 50px;
+	}
+	.media__row {
+		max-width: 350px;
+	}
+}
+@media(max-width: 1110px) {
+	.about__head {
+		flex-direction: column;
+	}
+	.about__video video {
+		max-width: none;
+	}
+	.about__video {
+		margin-bottom: 40px;
+		margin-right: 0;
+	}
+	.about-content__image {
+		position: absolute;
+		right: 0;
+		filter: blur(2px);
+		-webkit-filter: blur(2px);
+	}
+	.about-content {
+		justify-content: center;
+	}
+	.media__row {
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 973px) {
+	.logo {
+		width: 150px;
+	}
+	.media__content {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo {
+		width: 100px;
+	}
+	.aside__logo {
+		margin-bottom: 100px;
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 30px;
+	}
+	.aside__inner {
+		padding: 20px 25px;
+	}
+	.menu__item {
+		margin-bottom: 35px;
+	}
+	.menu__list {
+		justify-content: center;
+		align-items: center;
+	}
+	.switcher {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.intro {
+		padding-left: 230px;
+	}
+
+	aside {
+		transform: translateX(-100%);
+		transition: all 0.2s;
+	}
+	.aside.active {
+		transition: all 0.2s;
+		width: 100%;
+		max-width: none;
+		transform: translateX(0);
+	}
+	.intro {
+		padding-left: 0;
+	}
+	.header {
+		display: block;
+	}
+	.header__burger {
+		margin: 20px;
+	}
+	.wrapper.light {
+		.header__burger::before,
+		.header__burger::after,
+		.header__burger span {
+			background-color: #161617;
+		}
+	}
+	.portfolio {
+		padding: 0 10px;
+	}
+	.portfolio__content {
+		justify-content: center;
+	}
+	.title {
+		text-align: center;
+	}
+	.team {
+		padding: 0 10px;
+		&__content {
+			justify-content: center;
+			margin-left: 0;
+		}
+		&-row{
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&__content {
+				justify-content: center;
+			}
+		}
+	}
+	.about {
+		padding: 0 10px;
+	}
+	.about__head {
+		padding: 0;
+	}
+	.about__video video {
+		max-width: 100%;
+	}
+	.media {
+		padding-left: 0;
+	}
+	.media__row {
+		align-items: center;
+	}
+	.partners__item {
+		margin-right: 20px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.partners__content {
+		justify-content: center;
+	}
+	.partners__title {
+		text-align: center;
+	}
+}
+
+

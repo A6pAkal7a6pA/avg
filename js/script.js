@@ -1,3 +1,15 @@
+$("body").on('click', '[href*="#"]', function(e){
+  var fixed_offset = 100;
+  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+  e.preventDefault();
+
+	var naavy = $(".menu__link");
+
+naavy.click(function() {
+    naavy.removeClass("active");
+    $(this).addClass('active');
+});
+});
 new Vivus('my-svg', {
 	type: 'oneByOne',
 	duration: 100,
@@ -32,11 +44,20 @@ modeButton.addEventListener('click', (e) => {
 		mode.classList.remove('dark');
 	}
 });
-$(document).ready(function () {
-	$(".menu").on("click", "a", function (event) {
-		event.preventDefault();
-		var id = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({ scrollTop: top }, 1500);
-	});
-});
+
+
+
+
+document.querySelector('.header').addEventListener('click', () => {
+	let aside = document.getElementById('aside');
+	let burger = document.querySelector('.header__burger');
+	if(aside.classList.contains('active')) {
+		aside.classList.remove('active');
+		burger.classList.remove('active');
+	} else {
+		aside.classList.add('active');
+		burger.classList.add('active');
+	}
+	
+
+})

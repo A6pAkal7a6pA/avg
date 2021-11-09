@@ -13,7 +13,12 @@
 
 <body>
 	<div class="wrapper dark">
-		<aside class="aside">
+		<div class="header">
+			<div class="header__burger">
+				<span></span>
+			</div>
+		</div>
+		<aside class="aside" id="aside">
 			<div class="aside__inner">
 				<div class="aside__logo">
 					<img class="logo__dark" src="img/logo-mini.svg" alt="logo">
@@ -32,9 +37,17 @@
 							</a>
 						</li>
 						<li class="menu__item">
+							<a href="#partners" class="menu__link">
+								<div class="menu__image icon-partners">
+								</div>
+								<div class="menu__text">
+									Partners
+								</div>
+							</a>
+						</li>
+						<li class="menu__item">
 							<a href="#team" class="menu__link">
 								<div class="menu__image icon-team-icon">
-
 								</div>
 								<div class="menu__text">
 									Team
@@ -44,7 +57,6 @@
 						<li class="menu__item">
 							<a href="#about" class="menu__link">
 								<div class="menu__image icon-about-icon">
-
 								</div>
 								<div class="menu__text">
 									About us
@@ -52,7 +64,7 @@
 							</a>
 						</li>
 						<li class="menu__item">
-							<a href="#" class="menu__link">
+							<a href="#media" class="menu__link">
 								<div class="menu__image icon-media-icon">
 								</div>
 								<div class="menu__text">
@@ -64,7 +76,7 @@
 				</nav>
 				<div class="aside__switcher switcher">
 					<label for="toggle" class="switcher__dark">Dark</label>
-					<input type="checkbox" id="toggle" class="toggle--checkbox"/>
+					<input type="checkbox" id="toggle" class="toggle--checkbox" />
 					<label for="toggle" class="switcher__button toggle--label">
 						<span class="moon"></span>
 						<span class="toggle--label-background"></span>
@@ -75,8 +87,8 @@
 		</aside>
 		<section class="intro">
 			<object id="my-svg" type="image/svg+xml" data="img/main-img.svg"></object>
-			<img class="big-logo__dark" src="img/logo-big.svg" alt="logo">
-			<img class="big-logo__light" src="img/big-logo-light.svg" alt="logo">
+			<img class="big-logo__dark logo" src="img/logo-big.svg" alt="logo">
+			<img class="big-logo__light logo" src="img/big-logo-light.svg" alt="logo">
 		</section>
 		<section class="portfolio" id="portfolio">
 			<div class="portfolio__inner">
@@ -250,6 +262,26 @@
 				</div>
 			</div>
 		</section>
+		<section class="portfolio" id="partners">
+			<div class="portfolio__inner">
+				<div class="portfolio__title title">
+					Partners
+				</div>
+				<div class="partners__content">
+					<div class="partners__item part-item">
+						<a href="https://enjin.io/">
+							<h3 class="partners__title">Enjin</h3>
+							<img src="img/enjin.svg" alt="">
+						</a>
+					</div>
+					<div class="partners__item part-item">
+						<a href="https://www.moonmafia.io/">
+							<h3 class="partners__title">Moon Mafia Capital</h3>
+							<img src="img/moon-partner.jpg" alt="">
+						</a>
+					</div>
+			</div>
+		</section>
 		<section class="team" id="team">
 			<div class="team__title title">
 				Team
@@ -368,14 +400,19 @@
 					</div>
 					<div class="about__text">
 						<p>
-							<span>Hello, my name is Roman.</span> I am the owner and CEO of Auto Venture Media Groupe. Our team
-							consists of 11 text
-							content makers, 2 video content makers and 9 analysts. Collectively, posts on our social media reach 7,500
-							views per day. <span>The total number of subscribers is more than 45 thousand.</span>
+							<span>Hello, my name is Roman.</span> I am the owner and CEO of Automatic Venture Groupe. Our team
+							consists of 25 team members: text content makers, video content makers, analysts and other. We have
+							network of own media, collectively posts on our social media reach 7,500 views per day. <span>The total
+								number of subscribers is more than 45 thousand.</span> Here is what we can do for you in media:
+							shilling, announces, news, AMAs, Podcasts, reviews on our channels in Telegram + Youtube. Our work lasts
+							before TGE and after TGE.
 						</p>
 						<p>
-							Every month we spend 10,000$ advertising budgetMy group has one of the best coverage in Russian TelegramWe
-							want to offer you a partnership!
+							Every month we spend 20,000$+ advertising budget for expand exposure, every channel has a chat and our
+							audience is very active daily approx 500 messages total!
+						</p>
+						<p>
+							Automatic Venture Group has one of best coverage in Russian Telegram.
 						</p>
 						<p>
 							If necessary, we can help in cleaning various social channels from bots. Having the developed media we can
@@ -397,20 +434,19 @@
 							necessary.
 						</div>
 						<div class="about-content__title">
-							Additionally, we can:
+							What else we can do for you:
 						</div>
 						<ul class="about-content__list">
 							<li class="about-content__item">
-								Introduce you to VC`s, Advisers, KOLs - on demand.
+								Intro to VC and Advisers: Ferrum Advisory Services, Andromeda Capital, Moon Mafia, Titan Investments and
+								more.
 							</li>
 							<li class="about-content__item">
-								Intro to lauchpads EnjinStarter, KSMstarter, Poolz, NFTPad, Occam.Fi, lightningprotocol.finance - on
-								demand.
+								Intro to launchpads gamestation.io, aegislaunchpad.com, EnjinStarter, KSMstarter, Poolz,
+								lightningprotocol.finance and others.
 							</li>
 							<li class="about-content__item">
-								Provide you with a list of verified KOLs who can provide you with additional support, or you can use
-								their
-								channels through us.
+								Provide you with a list of verified KOLs who can make for you with additional support.
 							</li>
 						</ul>
 						<div class="about-content__subtitle">
@@ -453,42 +489,42 @@
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="http://t.me/joinchat/UI7AHqEsPy14XcuP" class="media-row__link">
+								t.me/joinchat/UI7AHqEsPy14XcuP
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/token-img-2.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/pure_x10" class="media-row__link">
+								t.me/pure_x10
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/pure_xchat" class="media-row__link">
+								t.me/pure_xchat
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/token-img-5.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/AutoTokenSale" class="media-row__link">
+								t.me/AutoTokenSale
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/joinchat/ahbxzN_GVkE1YWU0" class="media-row__link">
+								t.me/joinchat/ahbxzN_GVkE1YWU0
 							</a>
 						</div>
 					</div>
@@ -500,50 +536,50 @@
 					<div class="media-row__content">
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/token-img-2.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/NFTwhale" class="media-row__link">
+								t.me/NFTwhale
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/mrAutoTradeNFT" class="media-row__link">
+								t.me/mrAutoTradeNFT
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/token-img-4.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/NFTguide" class="media-row__link">
+								t.me/NFTguide
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/joinchat/H46gOs-b-adkMDA0" class="media-row__link">
+								t.me/joinchat/H46gOs-b-adkMDA0
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/token-img-6.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/nftxgames" class="media-row__link">
+								t.me/nftxgames
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/nftxchat" class="media-row__link">
+								t.me/nftxchat
 							</a>
 						</div>
 					</div>
@@ -555,18 +591,18 @@
 					<div class="media-row__content">
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/trading-img-1.png" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/CoinsStrike" class="media-row__link">
+								t.me/CoinsStrike
 							</a>
 						</div>
 						<div class="media-row__item">
 							<div class="media-row__image">
-								<img src="img/token-img-1.png" alt="token">
+								<img src="img/tg-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://t.me/joinchat/Jn_EUdcPanE3ZmM0" class="media-row__link">
+								t.me/joinchat/Jn_EUdcPanE3ZmM0
 							</a>
 						</div>
 					</div>
@@ -580,8 +616,8 @@
 							<div class="media-row__image">
 								<img src="img/ytb-icon.svg" alt="token">
 							</div>
-							<a href="#" class="media-row__link">
-								t.me/mrAutoTrade
+							<a href="https://www.youtube.com/channel/UCk8XrH_oO92jQH1JjaA8TqQ" class="media-row__link">
+								www.youtube.com/channel/UCk8XrH_oO92jQH1JjaA8TqQ
 							</a>
 						</div>
 					</div>
@@ -589,6 +625,10 @@
 			</div>
 		</section>
 	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
