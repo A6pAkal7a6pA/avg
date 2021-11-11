@@ -684,9 +684,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -896,14 +896,27 @@ a {
   font-family: "IBM Plex Mono", monospace;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 23px;
   color: #fff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .partners__item {
-  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .partners__item a {
@@ -923,6 +936,7 @@ a {
 }
 
 .partners__item a img {
+  background: #fff;
   width: 150px;
   height: 150px;
 }
@@ -1121,6 +1135,9 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .media__row {
     max-width: 300px;
@@ -1261,12 +1278,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .partners__item {
-    margin-right: 20px;
-  }
-  .partners__item:last-child {
-    margin-right: 0;
   }
   .partners__content {
     -webkit-box-pack: center;
