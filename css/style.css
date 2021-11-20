@@ -961,6 +961,32 @@ a {
      object-fit: cover;
 }
 
+.media-row__subitem-inner a {
+  display: block;
+  font-family: Calibri;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.media-row .media-row__inner a {
+  display: block;
+  font-family: Calibri;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
 .media-row__subitem-link {
   font-family: Calibri;
   font-size: 13px;
