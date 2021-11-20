@@ -813,12 +813,12 @@ a {
 	}
 
 	&__subitem {
-		display: flex;
-		align-items: center;
+		display: flex!important;
+		align-items: center!important;
 	}
 
 	&__subitem-image {
-		margin-right: 30px;
+		margin-right: 30px!important;
 		width: 53px;
 		height: 53px;
 		display: flex;
