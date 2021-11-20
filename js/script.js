@@ -69,11 +69,11 @@ document.querySelector('.header').addEventListener('click', () => {
 
 })
 
-let more = document.querySelector('.button__more');
-let content = document.querySelector('.portfolio__content');
+// let more = document.querySelector('.button__more');
+// let content = document.querySelector('.portfolio__content');
 
-more.addEventListener('click', () => {
-	let currentHeight = content.offsetHeight;
-	console.log(currentHeight);
-	content.style.maxHeight = (currentHeight + 193 + 25) + "px" 
-});
+// more.addEventListener('click', () => {
+// 	let currentHeight = content.offsetHeight;
+// 	console.log(currentHeight);
+// 	content.style.maxHeight = (currentHeight + 193 + 25) + "px" 
+// });
