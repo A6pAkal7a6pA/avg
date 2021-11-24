@@ -17,27 +17,27 @@ if ($('#aside').hasClass('active')) {
 	$('.header__burger').addClass('active');
 }
 });
-// new Vivus('my-svg', {
-// 	type: 'oneByOne',
-// 	duration: 100,
-// 	animTimingFunction: Vivus.EASE_IN,
-// 	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
-// }, function (myVivus) {
-// 	setTimeout(function () {
-// 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
-// 	}, 0);
-// })
+new Vivus('my-svg', {
+	type: 'oneByOne',
+	duration: 100,
+	animTimingFunction: Vivus.EASE_IN,
+	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
+}, function (myVivus) {
+	setTimeout(function () {
+		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+	}, 0);
+})
 
-// new Vivus('planet', {
-// 	type: 'oneByOne',
-// 	duration: 100,
-// 	animTimingFunction: Vivus.EASE,
-// 	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
-// }, function (myVivus) {
-// 	setTimeout(function () {
-// 		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
-// 	}, 100);
-// })
+new Vivus('planet', {
+	type: 'oneByOne',
+	duration: 100,
+	animTimingFunction: Vivus.EASE,
+	forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
+}, function (myVivus) {
+	setTimeout(function () {
+		myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+	}, 100);
+})
 
 let modeButton = document.querySelector('#toggle');
 let mode = document.querySelector('.wrapper');
